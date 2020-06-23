@@ -1,0 +1,39 @@
+<meta charset ="utf-8">
+<script type="text/javascript">
+
+function CompareAnswers(userAnswer, answer){
+	if (userAnswer==answer){
+	alert("Всё верно");
+	} else {
+    alert("А вот и нет. Правильный ответ " + answer);
+	}
+}
+
+function GetRandomNumber(max){
+return Math.round(Math.random()*max);
+}
+
+function GenerateRandomNumbers(num){
+	var numbers =[];
+	for(var i=0; i<num;i++){
+		var randomNumber = GetRandomNumber(100);
+		numbers.push(randomNumber);
+	}
+	return numbers;
+}
+
+var numbers = GenerateRandomNumbers(5);
+
+alert("Запомните числа и их порядок: " + numbers);
+
+var userAnswer = +prompt("Каким было первое число?");
+
+CompareAnswers(userAnswer,numbers[0]);
+
+userAnswer = +prompt("Каким было последнее число?");
+CompareAnswers(userAnswer,numbers[numbers.length-1]);
+
+var n = GetRandomNumber(numbers.length);
+userAnswer= + prompt("А как насчёт числа под номером "+(n+1)+" ?");
+CompareAnswers(userAnswer,numbers[n]);
+</script>
