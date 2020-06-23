@@ -1,0 +1,36 @@
+
+<meta charset="utf-8">
+<script type ="text/javascript">
+function AskQuestion(question, answers){
+var userInput=prompt(question);
+userInput=userInput.toLowerCase();
+for (var i=0; i<answers.length;i++){
+if (userInput== answer[i]){
+		alert("Это правильный ответ.");
+		score++;
+		return;
+	}
+}
+			alert("Вы неугадали");
+
+}
+var score=0;
+AskQuestion("Что можно увидеть с закрытыми глазами?", ["сон", "сновидения");
+AskQuestion("Какой болезнью никто неболеет на суше?", ["морской", "укусом акулы");
+AskQuestion("Какой конь не ест овса?", ["шахматный", "мёртвый");
+
+/*var questions = [
+["Что можно увидеть с закрытыми глазами?", ["сон", "сновидения"]],
+["Какой болезнью никто неболеет на суше?", ["морской", "укусом акулы"]],
+["Какой конь не ест овса?", ["шахматный", "мёртвый"]]
+];
+
+for (var i =0; i<questions.length;i++){
+	var quest=questions[i][0];
+	var answers=questions[i][1];
+	AskQuestion(quest, answers);
+}*/
+
+alert("Ваш результат - " + score+ ". Спасибо за участие.")
+
+</script>

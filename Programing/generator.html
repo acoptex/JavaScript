@@ -1,0 +1,28 @@
+<meta charsset="UTF-8">
+<script type="text/javascript">
+
+function GenerateText(array, length){
+	var password ="";
+	for (var i=0; i<length;i++){
+	var n = GetRandomNumber(array.length-1);
+	password=password+array[n];
+	}
+	return password;
+}
+function GetRandomNumber (max){
+	return Math.round(Math.random()*max);
+}
+
+function generatePassword (array, length){
+
+
+	var generatedPassword = GenerateText(array, length);
+
+	alert("Password is "+generatedPassword);
+
+}
+var length = prompt("Type your number");
+generatePassword (["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","*","/","!","£","$","%","^","&","@","#"], length);
+
+
+</script>

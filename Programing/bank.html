@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+//Bank program
+var sum = +prompt("Введите сумму вклада");
+var percent = +prompt("Введите процент для начисления");
+var years = +prompt("Введите количество лет");
+document.write("Сумма вклада - "+sum+ " рублей <br>");
+document.write("Процент для начисления - "+percent+ " <br>");
+document.write("Количество лет - "+years+ " <br><br>");
+document.write("Изменение размера вклада по годам :<br>");
+percent= (percent/100);
+	for (var year=1;year<=years;year++){
+    	sum=sum+(sum*percent);
+		document.write(year + " год - "+ sum.toFixed(2) + " рублей <br>");
+	}
+</script>

@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+function AskForWords(words){
+while(words.length !=0){
+	var i = parseInt(Math.random() * words.length);
+	var userTranslate = prompt("Как переводится слово: "+words[i][0]);
+	if (userTranslate == words[i][1]){
+		alert("Правильно!");
+		words.splice(i,1);//udalit element- esli slovo zapomnil user
+		} else {
+			alert("Правильный ответ - "+words[i][1]);
+		}
+	}
+}
+
+var easyWords=[
+["food", "еда"],
+["bike","велосипед"],
+["apple","яблоко"],
+["do","делать"],
+["mean","иметь в виду"],
+];
+
+var hardWords=[
+["chainsaw", "бензопила"],
+["squirrel","белка"],
+["castle","замок"],
+["homeland","родина"],
+["sewerage","канализация"],
+["bottom","дно"],
+];
+
+AskForWords(easyWords);
+
+alert("Поздравляю, Вы запомнили все слова. Переходим на следующий уровень");
+
+AskForWords(hardWords);
+
+alert("Поздравляю, Вы запомнили все слова. Конец игры");
+//var english = ["food","bike", "apple", "do", "mean"];
+//var russian = ["еда","велосипед","яблоко","делать","иметь в виду"]
+/*alert(words[0]);//"food", "еда"
+alert(words[1]);//"еда","велосипед"
+alert(words[0][0]);//"food"
+alert(words[0][1]);//"еда"
+alert(words[0][3]);//undifined*/
+</script>

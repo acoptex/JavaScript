@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+
+<script type ="text/javascript">
+// “Угадай число”
+var answer=parseInt(Math.random()*100);
+
+var playerNumber = 1;
+
+while(true){
+
+var userAnswer = prompt("Угадайте число от 0 до 100. \n Ходит игрок "+ playerNumber +". \n Для выхода нажмите q")
+
+if(userAnswer=="q" ){
+		alert("Конец игры. ");
+		break;
+	}
+
+userAnswer=parseInt(userAnswer);
+
+if(answer==userAnswer){
+		alert("Поздравляю, вы угадали! Победил игрок "+playerNumber+".\n Конец игры.");
+
+		break;
+	} else if (userAnswer>answer ){
+			alert("Вы ввели слишком большое число.");
+		} else if (userAnswer<answer){
+			alert("Вы ввели слишком маленькое число.");
+		}
+
+if (playerNumber==1){
+	playerNumber=2;
+	}
+else {
+	playerNumber=1;
+	}
+
+}
+alert("Правильное число было "+answer);
+</script>
